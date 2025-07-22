@@ -202,6 +202,24 @@ shinyApp(ui, server)</code></pre>
 
 
 </main> <!-- /main -->
+<!-- footer.html -->
+
+<script>
+
+  if ('serviceWorker' in navigator) {
+
+    navigator.serviceWorker
+
+      .register('sw.js', { scope: './' })
+
+      .then(() => console.log('Service Worker registered.'))
+
+      .catch(err => console.error('SW registration failed:', err));
+
+  }
+
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
