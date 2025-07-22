@@ -1,12 +1,15 @@
 project:
   type: website
   
+output-dir: docs  
+  
 extensions:
   - quarto-ext/shinylive
 
 website:
   title: "Cobb County Fire & Emergency Services - CRA SOC"
   navbar:
+    logo: resources/images/CCFES-Logo-Small.png
     left:
       - href: index.qmd
         text: Home
