@@ -1,0 +1,9 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "cra_soc",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\nlibrary(shinylive)\n\nWarning: package 'shinylive' was built under R version 4.4.3\n\n\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\nlibrary(shiny)\nui &lt;- fluidPage(\n  sliderInput(\"obs\", \"Observations:\", 10, 200, 100),\n  plotOutput(\"plot\")\n)\nserver &lt;- function(input, output, session) {\n  output$plot &lt;- renderPlot({\n    hist(rnorm(input$obs))\n  })\n}\nshinyApp(ui, server)"
+  }
+]

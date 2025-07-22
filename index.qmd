@@ -1,0 +1,31 @@
+---
+title: "cra_soc"
+filters:
+  - shinylive
+embed-resources: false
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+```{r}
+library(shinylive)
+```
+
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 500
+library(shiny)
+ui <- fluidPage(
+  sliderInput("obs", "Observations:", 10, 200, 100),
+  plotOutput("plot")
+)
+server <- function(input, output, session) {
+  output$plot <- renderPlot({
+    hist(rnorm(input$obs))
+  })
+}
+shinyApp(ui, server)
+```

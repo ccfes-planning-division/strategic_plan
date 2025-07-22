@@ -1,0 +1,27 @@
+project:
+  type: website
+  
+extensions:
+  - quarto-ext/shinylive
+
+website:
+  title: "Cobb County Fire & Emergency Services - CRA SOC"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    filters: 
+      - shinylive
+    embed-resources: false
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+
+
