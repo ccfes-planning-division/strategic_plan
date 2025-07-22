@@ -5,9 +5,7 @@ filters:
 embed-resources: false
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This is the first section of the CRA SOC.
 
 ```{r}
 library(shinylive)
@@ -29,3 +27,4 @@ server <- function(input, output, session) {
 }
 shinyApp(ui, server)
 ```
+
