@@ -2,4 +2,19 @@
 title: "About"
 ---
 
-About this site
+```{shinylive-r}
+#| include: false
+#| standalone: true
+#| viewerHeight: 500
+library(shiny)
+ui <- fluidPage(
+  sliderInput("obs", "Observations:", 10, 200, 100),
+  plotOutput("plot")
+)
+server <- function(input, output, session) {
+  output$plot <- renderPlot({
+    hist(rnorm(input$obs))
+  })
+}
+shinyApp(ui, server)
+```

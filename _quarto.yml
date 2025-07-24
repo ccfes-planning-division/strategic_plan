@@ -8,16 +8,24 @@ extensions:
   - quarto-ext/shinylive
 
 website:
-  title: "Cobb County Fire & Emergency Services - CRA SOC"
+  title: "Cobb County Fire & Emergency Services"
   navbar:
     logo: resources/images/CCFES-Logo-Small.png
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: Introduction
+      - href: area_characteristics.qmd
+        text: Area Characteristics
+      - href: programs_and_services.qmd
+        text: Programs and Services
+      - href: test_dash.qmd
+        text: Test Dashboard
 
 format:
   html:
+    code-fold: false
+    code-tools: false
+    page-layout: full
     include-after-body: footer.html
     filters: 
       - shinylive
@@ -27,8 +35,16 @@ format:
       - brand
     css: styles.css
     toc: true
-    resources: 
-      - sw.js
+    #resources: 
+    #  - sw.js
+    grid:
+      body-width: 1200px
+      
 
-
+execute: 
+  echo: false
+  warning: false
+  message: false
+  error: false
+  include: true
 

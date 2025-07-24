@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Community Risk Assessment",
+    "section": "",
+    "text": "The Community Risk Assessment (CRA) serves to identify, prioritize and define risks for Cobb County Fire and Emergency Services.\n\n\nBoard of Commissioners\n\n\nCommission Chair Lisa Cupid\n\nDistrict 1 Keli Gambrill\n\nDistrict 2 Erick Allen\n\nDistrict 3 JoAnn K. Birrell\n\nDistrict 4 Monique Sheffield\n\nCounty Manager Dr. Jackie McMorris\n\n\n\n\n\n\n\n\n\n\n\nExecutive Summary\nThis document serves as the Cobb County Fire and Emergency Services (CCFES) Community Risk Assessment-Standard of Cover (CRA-SOC) Document. The CRA-SOC is one of four key elements of the Commission on Fire Accreditation International (CFAI) accreditation process. The CRA-SOC is defined by the CFAI as “those written procedures that determine the distribution and concentration of fixed and mobile resources of an organization.”\nThe main purpose for creating and maintaining a CRA-SOC is to reduce risk by placing a focus on the deployment and concentration of resources that ensures a safe and effective response force for fire suppression, emergency medical service, hazardous materials, and specialty response situations.\nThe CRA-SOC starts by describing the community profile and response area characteristics. It then documents the risk factors specific to the response area’s unique community profile. Following risk factor analysis, the CRA-SOC defines service levels and describes the roles and responsibilities of each service, along with the deployment strategies and operational elements that maintain their stated level of service. Finally, performance is evaluated and the department’s plans for maintaining and improving response capabilities are enumerated.\nThe CRA-SOC provides department management with a process to constantly measure and evaluate the level and quality of service delivered to the community."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| include: false\n#| standalone: true\n#| viewerHeight: 500\nlibrary(shiny)\nui &lt;- fluidPage(\n  sliderInput(\"obs\", \"Observations:\", 10, 200, 100),\n  plotOutput(\"plot\")\n)\nserver &lt;- function(input, output, session) {\n  output$plot &lt;- renderPlot({\n    hist(rnorm(input$obs))\n  })\n}\nshinyApp(ui, server)"
+  },
+  {
+    "objectID": "index.html#category-iii",
+    "href": "index.html#category-iii",
+    "title": "Community Risk Assessment",
+    "section": "Category III",
+    "text": "Category III"
+  },
+  {
+    "objectID": "docs/test_dash.html",
+    "href": "docs/test_dash.html",
+    "title": "Test Quarto Dashboard",
+    "section": "",
+    "text": "This dashboard uses Quarto parameters to let you choose a dataset and view its first 10 rows.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nMazda RX4\n21.0\n6\n160.0\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\nMazda RX4 Wag\n21.0\n6\n160.0\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\nDatsun 710\n22.8\n4\n108.0\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\nHornet 4 Drive\n21.4\n6\n258.0\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\nHornet Sportabout\n18.7\n8\n360.0\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\nValiant\n18.1\n6\n225.0\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\nDuster 360\n14.3\n8\n360.0\n245\n3.21\n3.570\n15.84\n0\n0\n3\n4\n\n\nMerc 240D\n24.4\n4\n146.7\n62\n3.69\n3.190\n20.00\n1\n0\n4\n2\n\n\nMerc 230\n22.8\n4\n140.8\n95\n3.92\n3.150\n22.90\n1\n0\n4\n2\n\n\nMerc 280\n19.2\n6\n167.6\n123\n3.92\n3.440\n18.30\n1\n0\n4\n4"
+  },
+  {
+    "objectID": "docs/test_dash.html#overview",
+    "href": "docs/test_dash.html#overview",
+    "title": "Test Quarto Dashboard",
+    "section": "",
+    "text": "This dashboard uses Quarto parameters to let you choose a dataset and view its first 10 rows.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nMazda RX4\n21.0\n6\n160.0\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\nMazda RX4 Wag\n21.0\n6\n160.0\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\nDatsun 710\n22.8\n4\n108.0\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\nHornet 4 Drive\n21.4\n6\n258.0\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\nHornet Sportabout\n18.7\n8\n360.0\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n\n\nValiant\n18.1\n6\n225.0\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n\n\nDuster 360\n14.3\n8\n360.0\n245\n3.21\n3.570\n15.84\n0\n0\n3\n4\n\n\nMerc 240D\n24.4\n4\n146.7\n62\n3.69\n3.190\n20.00\n1\n0\n4\n2\n\n\nMerc 230\n22.8\n4\n140.8\n95\n3.92\n3.150\n22.90\n1\n0\n4\n2\n\n\nMerc 280\n19.2\n6\n167.6\n123\n3.92\n3.440\n18.30\n1\n0\n4\n4"
+  }
+]

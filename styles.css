@@ -1,1 +1,17 @@
-/* css styles */
+
+.responsive-img {
+  width: 50%;
+  max-width: 600px;
+  height: auto;
+}
+
+.column.sticky {
+  position: sticky;
+  top: 2rem;
+  align-self: center;
+}
+
+.column.center {
+  align-self: center;
+  text-align: center;
+}

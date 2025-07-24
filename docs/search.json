@@ -2,15 +2,50 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "cra_soc",
+    "title": "Community Risk Assessment",
     "section": "",
-    "text": "This is the first section of the CRA SOC.\n\nlibrary(shinylive)\n\nWarning: package 'shinylive' was built under R version 4.4.3\n\n\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\nlibrary(shiny)\nui &lt;- fluidPage(\n  sliderInput(\"obs\", \"Observations:\", 10, 200, 100),\n  plotOutput(\"plot\")\n)\nserver &lt;- function(input, output, session) {\n  output$plot &lt;- renderPlot({\n    hist(rnorm(input$obs))\n  })\n}\nshinyApp(ui, server)"
+    "text": "The Community Risk Assessment (CRA) serves to identify, prioritize and define risks for Cobb County Fire and Emergency Services.\n\n\nBoard of Commissioners\n\n\n\nCommission Chair\nLisa Cupid\n\n\nDistrict 1\nKeli Gambrill\n\n\nDistrict 2\nErick Allen\n\n\nDistrict 3\nJoAnn K. Birrell\n\n\nDistrict 4\nMonique Sheffield\n\n\nCounty Manager\nDr. Jackie McMorris\n\n\n\n\n\n\n\n\n\n\n\nExecutive Summary\nThis document serves as the Cobb County Fire and Emergency Services (CCFES) Community Risk Assessment-Standard of Cover (CRA-SOC) Document. The CRA-SOC is one of four key elements of the Commission on Fire Accreditation International (CFAI) accreditation process. The CRA-SOC is defined by the CFAI as “those written procedures that determine the distribution and concentration of fixed and mobile resources of an organization.”\nThe main purpose for creating and maintaining a CRA-SOC is to reduce risk by placing a focus on the deployment and concentration of resources that ensures a safe and effective response force for fire suppression, emergency medical service, hazardous materials, and specialty response situations.\nThe CRA-SOC starts by describing the community profile and response area characteristics. It then documents the risk factors specific to the response area’s unique community profile. Following risk factor analysis, the CRA-SOC defines service levels and describes the roles and responsibilities of each service, along with the deployment strategies and operational elements that maintain their stated level of service. Finally, performance is evaluated and the department’s plans for maintaining and improving response capabilities are enumerated.\nThe CRA-SOC provides department management with a process to constantly measure and evaluate the level and quality of service delivered to the community."
+  },
+  {
+    "objectID": "test_dash.html#histogram-of-x-variable",
+    "href": "test_dash.html#histogram-of-x-variable",
+    "title": "Iris Dashboard",
+    "section": "Histogram of X Variable",
+    "text": "Histogram of X Variable"
+  },
+  {
+    "objectID": "test_dash.html#data-preview",
+    "href": "test_dash.html#data-preview",
+    "title": "Iris Dashboard",
+    "section": "Data Preview",
+    "text": "Data Preview\n\n\n\nFirst 6 rows of iris dataset\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| include: false\n#| standalone: true\n#| viewerHeight: 500\nlibrary(shiny)\nui &lt;- fluidPage(\n  sliderInput(\"obs\", \"Observations:\", 10, 200, 100),\n  plotOutput(\"plot\")\n)\nserver &lt;- function(input, output, session) {\n  output$plot &lt;- renderPlot({\n    hist(rnorm(input$obs))\n  })\n}\nshinyApp(ui, server)"
+  },
+  {
+    "objectID": "programs_and_services.html#data-table",
+    "href": "programs_and_services.html#data-table",
+    "title": "Programs and Services",
+    "section": "Data Table",
+    "text": "Data Table"
+  },
+  {
+    "objectID": "test_weather_dashboard.html",
+    "href": "test_weather_dashboard.html",
+    "title": "Live Weather Dashboard",
+    "section": "",
+    "text": "Temperature: Loading… °F\nCondition: Loading…\nHumidity: Loading…%"
+  },
+  {
+    "objectID": "test_weather_dashboard.html#current-weather-in-new-york-city",
+    "href": "test_weather_dashboard.html#current-weather-in-new-york-city",
+    "title": "Live Weather Dashboard",
+    "section": "",
+    "text": "Temperature: Loading… °F\nCondition: Loading…\nHumidity: Loading…%"
   }
 ]

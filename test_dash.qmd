@@ -1,0 +1,74 @@
+---
+title: "Iris Dashboard"
+format:
+  dashboard:
+    theme: cosmo
+    bootstrap: 5
+params:
+  xvar:
+    value: Sepal.Length
+    input:
+      type: select
+      label: "X Variable"
+      choices: [Sepal.Length, Sepal.Width, Petal.Length, Petal.Width]
+  yvar:
+    value: Petal.Width
+    input:
+      type: select
+      label: "Y Variable"
+      choices: [Sepal.Length, Sepal.Width, Petal.Length, Petal.Width]
+  group:
+    value: Species
+    input:
+      type: select
+      label: "Color by"
+      choices: [None, Species]
+---
+
+```{r setup, include=FALSE}
+library(plotly)
+library(knitr)
+```
+
+## Scatter Plot
+
+```{r}
+# Scatterplot of iris based on selected parameters
+df <- iris
+p <- plot_ly(
+  data = df,
+  x = ~ .data[[params$xvar]],
+  y = ~ .data[[params$yvar]],
+  color = if (params$group == "None") NULL else ~ .data[[params$group]],
+  type = 'scatter',
+  mode = 'markers',
+  marker = list(size = 10)
+)
+p %>% layout(
+  title = paste(params$yvar, "vs", params$xvar),
+  xaxis = list(title = params$xvar),
+  yaxis = list(title = params$yvar)
+)
+```
+
+## Histogram of X Variable
+
+```{r}
+# Histogram of selected X variable
+plot_ly(
+  x = iris[[params$xvar]],
+  type = 'histogram'
+) %>% layout(
+  title = paste("Histogram of", params$xvar),
+  xaxis = list(title = params$xvar),
+  yaxis = list(title = "Count")
+)
+```
+
+## Data Preview
+
+```{r}
+# Preview first 6 rows of iris
+table <- head(iris)
+kable(table, caption = "First 6 rows of iris dataset")
+```

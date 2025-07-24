@@ -1,0 +1,33 @@
+---
+title: "Programs and Services"
+format:
+  dashboard:
+    orientation: columns
+    filter: true
+    columns: 12
+params:
+  var:
+    label: "Select Variable"
+    value: "mpg"
+    choices: ["mpg", "hp", "wt"]
+---
+
+## Histogram of Selected Variable {width=6}
+
+```{r}
+library(ggplot2)
+ggplot(mtcars, aes_string(params$var)) +
+  geom_histogram(bins = 10) +
+  labs(title = paste("Distribution of", params$var))
+```
+
+## Data Table {width=6}
+
+```{r}
+library(DT)
+DT::datatable(
+  mtcars[, params$var, drop = FALSE],
+  options = list(pageLength = 5, autoWidth = TRUE),
+  rownames = FALSE
+)
+```

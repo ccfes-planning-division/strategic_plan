@@ -1,30 +1,82 @@
 ---
-title: "cra_soc"
+title: "Community Risk Assessment"
+author: "Fire Planning Division"
 filters:
   - shinylive
 embed-resources: false
 ---
 
-This is the first section of the CRA SOC.
+>The Community Risk Assessment (CRA) serves to identify, prioritize and define risks for Cobb County Fire and Emergency Services.
+
+# Board of Commissioners
+
+::::: columns
+::: {.column .center width="30%"}
+![](images/clipboard-1106098833.jpeg){.responsive-img}
+
+Commission Chair\
+Lisa Cupid
+
+<br><br>
+
+
+![](images/clipboard-3533210209.jpeg){.responsive-img}
+
+District 1\
+Keli Gambrill
+
+<br><br>
+
+![](images/clipboard-2315715924.jpeg){.responsive-img}
+
+District 2\
+Erick Allen
+
+<br><br>
+
+![](images/clipboard-3423522650.jpeg){.responsive-img}
+
+District 3\
+JoAnn K. Birrell
+
+<br><br>
+
+![](images/clipboard-1079283011.jpeg){.responsive-img}
+
+District 4\
+Monique Sheffield
+
+<br><br>
+
+![](images/clipboard-2640857297.jpeg){.responsive-img}
+
+County Manager\
+Dr. Jackie McMorris
+:::
+
+::: {.column .sticky width="70%"}
+```{r}
+
+source('./r_scripts/leaflet_maps.R')
+
+gis_district_leaflet
+
+```
+:::
+:::::
+
+# Executive Summary
+
+This document serves as the Cobb County Fire and Emergency Services (CCFES) Community Risk Assessment-Standard of Cover (CRA-SOC) Document. The CRA-SOC is one of four key elements of the Commission on Fire Accreditation International (CFAI) accreditation process. The CRA-SOC is defined by the CFAI as “those written procedures that determine the distribution and concentration of fixed and mobile resources of an organization.”
+
+The main purpose for creating and maintaining a CRA-SOC is to reduce risk by placing a focus on the deployment and concentration of resources that ensures a safe and effective response force for fire suppression, emergency medical service, hazardous materials, and specialty response situations.
+
+The CRA-SOC starts by describing the community profile and response area characteristics. It then documents the risk factors specific to the response area’s unique community profile. Following risk factor analysis, the CRA-SOC defines service levels and describes the roles and responsibilities of each service, along with the deployment strategies and operational elements that maintain their stated level of service. Finally, performance is evaluated and the department’s plans for maintaining and improving response capabilities are enumerated.
+
+The CRA-SOC provides department management with a process to constantly measure and evaluate the level and quality of service delivered to the community.
 
 ```{r}
-library(shinylive)
+
+station_territory_census_leaflet
+
 ```
-
-
-```{shinylive-r}
-#| standalone: true
-#| viewerHeight: 500
-library(shiny)
-ui <- fluidPage(
-  sliderInput("obs", "Observations:", 10, 200, 100),
-  plotOutput("plot")
-)
-server <- function(input, output, session) {
-  output$plot <- renderPlot({
-    hist(rnorm(input$obs))
-  })
-}
-shinyApp(ui, server)
-```
-
