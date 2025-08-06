@@ -1,5 +1,5 @@
 ---
-title: "Community Risk Assessment"
+title: "Strategic Plan"
 author: "Fire Planning Division"
 filters:
   - shinylive
