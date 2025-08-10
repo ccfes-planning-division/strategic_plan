@@ -7,7 +7,6 @@ library(dplyr)
 library(tidyr)
 
 ### Paramaters and options
-census_api_key("5774f169d05ceeb42409b07d46f64131a43289d6", install = TRUE, overwrite = TRUE)
 readRenviron("~/.Renviron")
 options(tigris_use_cache = TRUE)
 year <- 2023
